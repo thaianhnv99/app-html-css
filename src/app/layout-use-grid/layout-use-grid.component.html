@@ -1,0 +1,11 @@
+<div class="layouts">
+  <div class="layout-item" *ngFor="let img of images">
+    <img src="{{img.src}}" alt="" class="layout-image">
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-card" *ngFor="let img of imageForGrid">
+    <img src="{{img.src}}" alt="" class="grid-card-image">
+  </div>
+</div>

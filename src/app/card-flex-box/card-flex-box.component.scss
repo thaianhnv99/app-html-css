@@ -1,0 +1,191 @@
+.cards {
+  display: flex;
+  margin-left: calc(-1 * var(--spacing));
+  flex-wrap: wrap;
+  --spacing: 30px;
+  --column: 4;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: calc(calc(100% / var(--column)) - 30px);
+  margin-left: var(--spacing);
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .cards {
+    --spacing: 30px;
+    --column: 3;
+  }
+}
+
+.card-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card-top {
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: 500;
+  margin-bottom: 25px;
+  // word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.card-user {
+  display: flex;
+  align-items: center;
+}
+
+.card-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100rem;
+  flex-shrink: 0; //cố định tại chiều cao đó
+  object-fit: cover; //để không bị méo
+}
+
+.card-user-info {
+  padding-left: 20px;
+  flex: 1;
+}
+
+.card-user-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.card-user-name {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.card-user-game {
+  font-weight: 300;
+  color: #999;
+  font-size: 13px;
+}
+
+.card-bottom {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-live {
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  background-color: orange;
+}
+
+.card-view {
+  font-weight: 300;
+  font-size: 13px;
+  color: #999;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-bottom {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.card-user {
+  margin-top: auto;
+}
+
+//THử nghiệm flex-basic
+.event-column > * {
+  flex-basis: 100%;
+}
+
+.event-column {
+  margin-top: 30px;
+  display: flex;
+
+  .col {
+    min-height: 50px;
+    background-color: #d0d0d0;
+    border: 1px red solid;
+    border-radius: 10px;
+    padding: 20px;
+  }
+}
+
+.grid-ish > * {
+  flex: 1 1 calc(100%/3);
+}
+
+.grid-ish {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .col {
+    min-height: 50px;
+    background-color: #d0d0d0;
+    border: 1px red solid;
+    border-radius: 10px;
+    padding: 20px;
+  }
+}
+
+.content-aside {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .col {
+    min-height: 50px;
+    background-color: #d0d0d0;
+    border: 1px red solid;
+    border-radius: 10px;
+    padding: 20px;
+  }
+}
+
+.content-aside > *:nth-child(1) {
+  flex: 1 1 70%;
+  min-width: 30ch;
+}
+
+.content-aside > *:nth-child(2) {
+  flex: 1 1 30%;
+}

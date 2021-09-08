@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*padding: 20px;*/
+  line-height: 1.6;
+}
+
+h1 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.icons-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid #da5959;
+
+  --color: #942355;
+}
+
+.icon-title {
+  margin-top: 10px;
+  font-size: 27px;
+  color: var(--color)
+}
+
+.icon-custom {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center; /*Căn ngang trên và dưới*/
+  justify-content: center; /*Căn dọc trái và phải*/
+  color: var(--color);
+  position: relative;
+}
+
+.icon-custom:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit; /* là kế thừa từ thằng cha nó */
+  background-color: currentColor;
+  opacity: 0.2;
+}
+
+/*css cho trang home*/
+.page {
+  display: grid;
+  grid-template: "header header header" var(--height-header) /*Chi dinh la 1 row vaf size cua 1 row*/
+    ". hero ." 50vh
+    ". main ." auto
+    "footer footer footer" 10em
+    / 1fr 10fr 1fr; /* Phan con lai day la column */
+  grid-column-gap: 30px;
+  --height-header: 6em;
+}
+
+header {
+  grid-area: header;
+}
+
+.hero {
+  grid-area: hero;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url(https://images.unsplash.com/photo-1627910204751-62a41b344f03?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80) no-repeat 50%;
+  color: white;
+  background-size: cover;
+  background-attachment: inherit;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 6em;
+  margin: 0;
+}
+
+.hero.sub-title {
+  font-size: 2em;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-row-gap: 30px;
+}
+
+main h1 {
+  font-size: 6em;
+}
+
+aside {
+  grid-area: aside;
+  background: rgba(0, 0, 0, 0.16);
+  padding: 3em;
+}
+
+aside h1 {
+  font-size: 2em;
+}
+
+footer {
+  grid-area: footer;
+  margin-top: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: yellow;
+}
+
+.home {
+  display: grid;
+  grid-template:
+            "image title" 3em
+            "image content" auto
+            / 1fr 3fr;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+  grid-column-gap: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.home-image {
+  grid-area: image;
+  width: 100%;
+  height: 100%;
+}
+
+.home-title {
+  grid-area: title;
+}
+
+.home-content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  margin-bottom: auto;
+}
+
+.home-content a {
+  display: contents;
+}
+
+/*code xu ly phan menu da cap*/
+.header__inner {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+.header__inner ul {
+  list-style-type: none;
+}
+
+.logo img {
+  width: 10em;
+  height: 4em;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  margin: 0 1rem;
+}
+
+.menu__link {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 1rem;
+  height: var(--height-header);
+  align-items: center;
+  display: flex;
+}
+
+.menu__item:hover .menu__child {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu__child {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s linear;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 10px 10px;
+}
+
+.menu__child-item {
+  width: 25%;
+}
+
+.menu__child-item h4 {
+  color: white;
+  font-size: 1.4rem;
+  padding: 2rem;
+  background: #1c9375;
+}
+
+.menu__child-list li {
+  padding: 1.4rem 2rem;
+  border-top: 1px solid white;
+}

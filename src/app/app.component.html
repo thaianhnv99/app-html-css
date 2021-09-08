@@ -1,0 +1,68 @@
+<!--<h1>Sử dụng currentColor để thay đổi color và backgrout của 1 icon</h1>-->
+<!--<div class="icons-info">-->
+<!--    <div class="icon-custom">-->
+<!--        <ion-icon name="alarm" class="icon-color"></ion-icon>-->
+<!--    </div>-->
+<!--    <div class="icon-title">CurrentColor: sử dụng thuộc tính này</div>-->
+<!--</div>-->
+
+<section id="page" class="page">
+  <header>
+    <div class="header__inner">
+      <div class="logo"><img src="https://cdn.freebiesupply.com/logos/large/2x/harvester-logo-png-transparent.png"
+                             alt=""></div>
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="" class="menu__link">Home</a>
+          <div class="menu__child">
+            <div class="menu__child-item">
+              <h4>FLEXBOX</h4>
+              <ul class="menu__child-list">
+                <li><a routerLink="/card-flex-box">card-flex-box</a></li>
+              </ul>
+            </div>
+            <div class="menu__child-item">
+              <h4>GRID</h4>
+              <ul class="menu__child-list">
+                <li><a routerLink="/grid-responsive">grid để xử lí responsive</a></li>
+                <li><a routerLink="/grid-responsive-for-card">grid để xử lí responsive cho card</a></li>
+                <li><a routerLink="/layout-use-grid">grid để chia layout</a></li>
+                <li><a routerLink="/use-grid-tip">Sử dụng grid tip code (casc column cao = n # row)</a></li>
+              </ul>
+            </div>
+            <div class="menu__child-item">
+              <h4>LIGHTBOX</h4>
+              <ul class="menu__child-list">
+                <li><a routerLink="/light-box">sử dụng light box</a></li>
+              </ul>
+            </div>
+            <div class="menu__child-item">
+              <h4>Elements</h4>
+              <ul class="menu__child-list">
+                <li>Demo item</li>
+                <li>Demo item</li>
+                <li>Demo item</li>
+                <li>Demo item</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu__item"><a href="" class="menu__link">Pages</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="hero">
+    <h1>CSS GRID</h1>
+    <h3 class="sub-title">SSS</h3>
+  </div>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+    <h1 class="footer-title">
+      THANK YOU S2!
+    </h1>
+  </footer>
+</section>

@@ -1,0 +1,14 @@
+<div lightbox-group class="images">
+    <div class="image-item" *ngFor="let img of images; let i">
+        <img src="{{img.src}}"
+             lightbox
+             [counter]="true"
+             [animationDuration]="500"
+             [animationTimingFunction]="'cubic-bezier(0.77, 0, 0.175, 1)'"
+             [hideThumbnail]="false"
+             [backgroundOpacity]="0.8"
+             [fullImage]="{path: img.src}"
+             alt=""
+        />
+    </div>
+</div>

@@ -1,0 +1,102 @@
+<h1>Form the blog</h1>
+<form [formGroup]="rfContact">
+  <input formControlName="a" placeholder="Item name">-->
+  <input formControlName="b" placeholder="Item description">-->
+  <input formControlName="c" placeholder="Item price">
+  <div formArrayName="tels" *ngIf="tels.controls.length">
+    <div class="form-group row" *ngFor="let c of tels.controls; index as i">
+      <label for="example-tel-input" class="col-md-2 col-form-label">Tel:</label>
+      <div class="col-md-10">
+        <input class="form-control" type="tel" id="example-tel-input" [formControlName]="i">
+        <div class="text-right">
+          <button class="btn btn-info" (click)="addTel()">+</button>
+          <button class="btn btn-danger" (click)="removeTel(i)" *ngIf="tels.controls.length > 1">-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn"
+          (click)="addTel()"
+  >Add item
+  </button>
+</form>
+<div class="wrapper">
+  <div class="boxed"></div>
+  <p>Trong quá trình đi làm và học tập mình đã tích hợp được nhiều kinh nghiệm cũng như nhiều lỗi về CSS
+    mà chúng ta trong lúc làm hay gặp, trong bài viết này mình chia sẻ chúng cho các bạn hi vọng sẽ giúp
+    ích cho các bạn nhé.</p>
+</div>
+
+<div class="dropdown">
+  <div class="dropdown-select">
+    <span>Figma</span>
+    <i>Icon</i>
+  </div>
+  <div class="dropdown-list">
+    <div class="dropdown-item" *ngFor="let language of locales" (click)="changeLanguage(language.localeCode)">{{language.label}}</div>
+  </div>
+</div>
+<div class="form-example">
+  <label>
+    Your email
+    <input type="text" class="form-example-email" placeholder="Nhập email...">
+  </label>
+</div>
+
+<p>Trong quá trình đi làm và học tập mình đã tích hợp được nhiều kinh nghiệm cũng như nhiều lỗi về CSS
+  mà chúng ta trong lúc làm hay gặp, trong bài viết này mình chia sẻ chúng cho các bạn hi vọng sẽ giúp
+  ích cho các bạn nhé.</p>
+<div class="home">
+  <img
+    src="https://images.unsplash.com/photo-1628008043473-3e2a18a77852?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80"
+    alt="" class="home-image">
+  <h2 class="home-title">From the blog</h2>
+  <div class="home-content">
+    <p>Trong quá trình đi làm và học tập mình đã tích hợp được nhiều kinh nghiệm cũng như nhiều lỗi về CSS
+      mà chúng ta trong lúc làm hay gặp, trong bài viết này mình chia sẻ chúng cho các bạn hi vọng sẽ giúp
+      ích cho các bạn nhé.
+      Xuất hiện khoảng trống giữa các thẻ, nguyên nhân có thể là do margin, padding, thẻ inline-block hoặc
+      chưa dùng reset CSS
+      Kích thước lớn hơn dự kiến dù đã set width, height, nguyên nhân là chưa dùng box-sizing: border-box
+      dẫn đến width height thêm padding và border vô nên to hơn
+      Khi dùng flexbox co lại màn hình nhưng cấu trúc không rớt xuống hàng nguyên nhân là do mặc định
+      flex-wrap: nowrap nên nó sẽ không rớt. Trong quá trình đi làm và học tập mình đã tích hợp được nhiều
+      kinh nghiệm cũng như nhiều lỗi về CSS
+      mà chúng ta trong lúc làm hay gặp, trong bài viết này mình chia sẻ chúng cho các bạn hi vọng sẽ giúp
+      ích cho các bạn nhé.
+      Xuất hiện khoảng trống giữa các thẻ, nguyên nhân có thể là do margin, padding, thẻ inline-block hoặc
+      chưa dùng reset CSS
+      Kích thước lớn hơn dự kiến dù đã set width, height, nguyên nhân là chưa dùng box-sizing: border-box
+      dẫn đến width height thêm padding và border vô nên to hơn
+      Khi dùng flexbox co lại màn hình nhưng cấu trúc không rớt xuống hàng nguyên nhân là do mặc định
+      flex-wrap: nowrap nên nó sẽ không rớt</p>
+    <a href="#">Read more</a>
+  </div>
+</div>
+<div class="home">
+  <img
+    src="https://images.unsplash.com/photo-1628008043473-3e2a18a77852?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80"
+    alt="" class="home-image">
+  <h2 class="home-title">From the blog</h2>
+  <div class="home-content">
+    <p>Trong quá trình đi làm và học tập mình đã tích hợp được nhiều kinh nghiệm cũng như nhiều lỗi về CSS
+      mà chúng ta trong lúc làm hay gặp, trong bài viết này mình chia sẻ chúng cho các bạn hi vọng sẽ giúp
+      ích cho các bạn nhé.
+      Xuất hiện khoảng trống giữa các thẻ, nguyên nhân có thể là do margin, padding, thẻ inline-block hoặc
+      chưa dùng reset CSS
+      Kích thước lớn hơn dự kiến dù đã set width, height, nguyên nhân là chưa dùng box-sizing: border-box
+      dẫn đến width height thêm padding và border vô nên to hơn
+      Khi dùng flexbox co lại màn hình nhưng cấu trúc không rớt xuống hàng nguyên nhân là do mặc định
+      flex-wrap: nowrap nên nó sẽ không rớt. Trong quá trình đi làm và học tập mình đã tích hợp được nhiều
+      kinh nghiệm cũng như nhiều lỗi về CSS
+      mà chúng ta trong lúc làm hay gặp, trong bài viết này mình chia sẻ chúng cho các bạn hi vọng sẽ giúp
+      ích cho các bạn nhé.
+      Xuất hiện khoảng trống giữa các thẻ, nguyên nhân có thể là do margin, padding, thẻ inline-block hoặc
+      chưa dùng reset CSS
+      Kích thước lớn hơn dự kiến dù đã set width, height, nguyên nhân là chưa dùng box-sizing: border-box
+      dẫn đến width height thêm padding và border vô nên to hơn
+      Khi dùng flexbox co lại màn hình nhưng cấu trúc không rớt xuống hàng nguyên nhân là do mặc định
+      flex-wrap: nowrap nên nó sẽ không rớt</p>
+    <a href="#">Read more</a>
+  </div>
+</div>
